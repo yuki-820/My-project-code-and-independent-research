@@ -1,0 +1,85 @@
+{
+  "upstream": "https://github.com/MaizRajput/CreditCheck",
+  "commit": "06baaae3b68bc811d5314e861321dea69486c16d",
+  "pbix_url": "https://raw.githubusercontent.com/MaizRajput/CreditCheck/06baaae3b68bc811d5314e861321dea69486c16d/CreditCheck.pbix",
+  "pbix_sha256": "4fc5bcb6a614536dea9c40096038cc52304bc9a5b7e527be954132c2044370cd",
+  "retrieved_date": "2026-10-11",
+  "data_nature": "Author-generated synthetic data, extracted from embedded PBIX model, not original CSV bytes",
+  "extractor": "pbixray==0.15.5",
+  "row_changes": "None; dates serialized as ISO dates, model calculated columns retained",
+  "tables": {
+    "branches": {
+      "rows": 25,
+      "columns": [
+        "branch_id",
+        "branch_name",
+        "city",
+        "region",
+        "manager_name"
+      ],
+      "csv_sha256": "25e157084211d64b35060a6f329fa8e0f802d1ed027d8e01f1be2021760393f0"
+    },
+    "customers": {
+      "rows": 5000,
+      "columns": [
+        "customer_id",
+        "name",
+        "age",
+        "gender",
+        "city",
+        "income",
+        "employment_type",
+        "credit_score",
+        "join_date",
+        "Credit Band",
+        "Income Band"
+      ],
+      "csv_sha256": "dab2d669c177d33182b8aa039e3f9a08b706b7d0216f0ead818f8285371f7877"
+    },
+    "loan_applications": {
+      "rows": 7500,
+      "columns": [
+        "application_id",
+        "customer_id",
+        "branch_id",
+        "application_date",
+        "requested_amount",
+        "approval_status",
+        "risk_score"
+      ],
+      "csv_sha256": "5ea11fc61e64455013aa6ff15801e10a4052720b00ec06c7217af36fb3f4c47d"
+    },
+    "loans": {
+      "rows": 6112,
+      "columns": [
+        "loan_id",
+        "application_id",
+        "customer_id",
+        "branch_id",
+        "loan_type",
+        "loan_amount",
+        "interest_rate",
+        "tenure_months",
+        "disbursement_date",
+        "status",
+        "Current DPD",
+        "DPD Bucket"
+      ],
+      "csv_sha256": "b3c598906e6cd52e601b5ed382627773ef2a9adc6ad5c523f24f3d17ff0d177c"
+    },
+    "repayments": {
+      "rows": 153170,
+      "columns": [
+        "payment_id",
+        "loan_id",
+        "due_date",
+        "paid_date",
+        "amount_due",
+        "amount_paid",
+        "payment_status",
+        "dpd"
+      ],
+      "csv_sha256": "544ac17275343588b25d2f39dce05ab9fffc372e2bd03ab91870ecb9baaedd7e"
+    }
+  }
+}

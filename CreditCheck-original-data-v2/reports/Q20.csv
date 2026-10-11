@@ -1,0 +1,4 @@
+payment_status,installments,min_dpd,max_dpd,positive_dpd_rows,missing_paid_date_rows
+late,17595,1,29,17595,0
+missed,9450,30,720,9450,9450
+on_time,126125,0,2,42320,0

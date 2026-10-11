@@ -1,0 +1,26 @@
+branch_id,branch_name,applications,approved,approval_rate_pct,approval_rank
+3,Lucknow North Branch,322,273,84.78,1
+25,Gwalior Central Branch,303,256,84.49,2
+11,Kolkata East Branch,291,244,83.85,3
+18,Ahmedabad West Branch,278,233,83.81,4
+16,Mumbai West Branch,329,273,82.98,5
+13,Bhubaneswar East Branch,305,252,82.62,6
+20,Nagpur West Branch,281,232,82.56,7
+17,Pune West Branch,312,256,82.05,8
+23,Raipur Central Branch,276,226,81.88,9
+4,Jaipur North Branch,287,235,81.88,10
+22,Indore Central Branch,298,244,81.88,11
+9,Kochi South Branch,319,261,81.82,12
+6,Bengaluru South Branch,305,249,81.64,13
+24,Jabalpur Central Branch,286,232,81.12,14
+19,Surat West Branch,296,240,81.08,15
+1,Delhi North Branch,298,241,80.87,16
+12,Patna East Branch,315,254,80.63,17
+5,Dehradun North Branch,284,229,80.63,18
+2,Chandigarh North Branch,278,224,80.58,19
+21,Bhopal Central Branch,314,253,80.57,20
+7,Chennai South Branch,313,251,80.19,21
+14,Guwahati East Branch,292,234,80.14,22
+15,Ranchi East Branch,327,259,79.2,23
+8,Hyderabad South Branch,294,230,78.23,24
+10,Coimbatore South Branch,297,231,77.78,25

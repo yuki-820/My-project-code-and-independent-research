@@ -1,0 +1,5 @@
+loan_type,loans,original_principal,defaults,default_rate_pct
+home,645,2726712000,56,8.68
+business,1107,2600596000,88,7.95
+auto,1796,1392655000,111,6.18
+personal,2564,648330000,123,4.8
