@@ -1,0 +1,11 @@
+data/*.db
+data/original/*.csv
+data/source.pbix
+__pycache__/
+*.pyc
+real_project/data/*.csv
+real_project/data/*.xls
+real_project/data/*.zip
+real_project/data/*.db
+real_project/reports/splits.csv
+reports/pandas/

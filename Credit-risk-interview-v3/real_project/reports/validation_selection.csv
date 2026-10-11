@@ -1,0 +1,5 @@
+model,C,validation_auc
+latest_only,1.0,0.7424702926317084
+six_month_features,0.01,0.757650089799004
+six_month_features,0.1,0.7574222259348425
+six_month_features,1.0,0.7569418250492537

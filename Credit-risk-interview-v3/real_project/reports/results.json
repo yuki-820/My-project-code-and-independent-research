@@ -1,0 +1,191 @@
+{
+  "source": {
+    "url": "https://archive.ics.uci.edu/static/public/350/default+of+credit+card+clients.zip",
+    "source_page": "https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients",
+    "citation": "Yeh, I. (2009). Default of Credit Card Clients [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C55S3H",
+    "license": "CC BY 4.0",
+    "zip_sha256": "56c885f84457f6680f8438f02bfcdac9579323d8a94465ee5f26e32baa727602",
+    "xls_sha256": "30c6be3abd8dcfd3e6096c828bad8c2f011238620f5369220bd60cfc82700933",
+    "csv_sha256": "4edce6da569b2c30788a85fd98a9bafb1a983e8ca1a7aac875dd7ff853cbd0bb",
+    "rows": 30000,
+    "read_rule": "read_excel(header=1); preserve all rows and values; CSV serialization"
+  },
+  "quality": {
+    "rows": 30000,
+    "defaults": 6636,
+    "default_rate": 0.2212,
+    "missing_cells": 0,
+    "negative_bill_cells": 3932,
+    "status_values": [
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "education_values": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "marriage_values": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "split_sizes": {
+      "test": 6000,
+      "train": 18000,
+      "validation": 6000
+    },
+    "checks": [
+      "source hash",
+      "unique ID",
+      "no missing",
+      "positive limits",
+      "binary labels",
+      "unique client/month",
+      "disjoint splits",
+      "all SQL features equal pandas"
+    ]
+  },
+  "selection": [
+    {
+      "model": "latest_only",
+      "C": 1.0,
+      "validation_auc": 0.7424702926317084
+    },
+    {
+      "model": "six_month_features",
+      "C": 0.01,
+      "validation_auc": 0.757650089799004
+    },
+    {
+      "model": "six_month_features",
+      "C": 0.1,
+      "validation_auc": 0.7574222259348425
+    },
+    {
+      "model": "six_month_features",
+      "C": 1.0,
+      "validation_auc": 0.7569418250492537
+    }
+  ],
+  "models": {
+    "latest_only": {
+      "C": 1.0,
+      "validation": {
+        "n": 6000,
+        "defaults": 1327,
+        "auc": 0.7424702926317084,
+        "ks": 0.3824957011458182,
+        "brier": 0.1408882296165409,
+        "threshold": 0.2753820600002864,
+        "flagged": 1206,
+        "flag_rate": 0.201,
+        "precision": 0.5364842454394693,
+        "recall": 0.4875659382064808,
+        "false_positive_rate": 0.11962336828589772,
+        "retained_default_rate": 0.14184397163120568,
+        "tp": 647,
+        "fp": 559,
+        "fn": 680,
+        "tn": 4114
+      },
+      "test": {
+        "n": 6000,
+        "defaults": 1327,
+        "auc": 0.7333425951742852,
+        "ks": 0.3645252570080233,
+        "brier": 0.14249139489043786,
+        "threshold": 0.2753820600002864,
+        "flagged": 1189,
+        "flag_rate": 0.19816666666666666,
+        "precision": 0.5273338940285954,
+        "recall": 0.4724943481537302,
+        "false_positive_rate": 0.12026535416220843,
+        "retained_default_rate": 0.1454998960715028,
+        "tp": 627,
+        "fp": 562,
+        "fn": 700,
+        "tn": 4111
+      }
+    },
+    "six_month_features": {
+      "C": 0.01,
+      "validation": {
+        "n": 6000,
+        "defaults": 1327,
+        "auc": 0.757650089799004,
+        "ks": 0.403388382426197,
+        "brier": 0.13918088419564392,
+        "threshold": 0.2881216093411632,
+        "flagged": 1200,
+        "flag_rate": 0.2,
+        "precision": 0.5616666666666666,
+        "recall": 0.5079125847776941,
+        "false_positive_rate": 0.11256152364647978,
+        "retained_default_rate": 0.13604166666666667,
+        "tp": 674,
+        "fp": 526,
+        "fn": 653,
+        "tn": 4147
+      },
+      "test": {
+        "n": 6000,
+        "defaults": 1327,
+        "auc": 0.7585018781433079,
+        "ks": 0.39344622888530056,
+        "brier": 0.13874921033522877,
+        "threshold": 0.2881216093411632,
+        "flagged": 1150,
+        "flag_rate": 0.19166666666666668,
+        "precision": 0.5634782608695652,
+        "recall": 0.4883195177091183,
+        "false_positive_rate": 0.10742563663599401,
+        "retained_default_rate": 0.14,
+        "tp": 648,
+        "fp": 502,
+        "fn": 679,
+        "tn": 4171
+      }
+    }
+  },
+  "simple_rule_test": {
+    "rule": "latest_status >= 2",
+    "flag_rate": 0.09883333333333333,
+    "flagged": 593,
+    "precision": 0.6947723440134908,
+    "recall": 0.31047475508666167,
+    "tp": 412,
+    "fp": 181
+  },
+  "paired_auc_delta_ci95_bootstrap300": [
+    0.015017587927338039,
+    0.035611014888409585
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "pandas": "2.2.3",
+    "sklearn": "1.8.0"
+  },
+  "limits": [
+    "Historical 2005 Taiwan credit-card cohort, not current Kuaishou applicants",
+    "Random client holdout, not out-of-time validation",
+    "Flagged = simulated review queue, not actual denial or collection action",
+    "Default next month is source label, not independently defined FPD7",
+    "No causal claim of prevented default or increased approval",
+    "Sex, age, marital status, education excluded; this does not prove fairness"
+  ]
+}

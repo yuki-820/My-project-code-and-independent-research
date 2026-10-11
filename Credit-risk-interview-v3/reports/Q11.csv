@@ -1,0 +1,6 @@
+region,loans,original_principal,defaults,default_rate_pct
+West,1234,1515980000,66,5.35
+North,1202,1507464000,77,6.41
+South,1222,1485556000,76,6.22
+East,1243,1439006000,76,6.11
+Central,1211,1420287000,83,6.85
